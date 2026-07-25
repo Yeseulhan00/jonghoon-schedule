@@ -16,6 +16,7 @@
     --math: #dce6f1;
     --art: #e2efda;
     --music: #fff2cc;
+    --kumon: #e6d9f2;
     --transit: #f2f2f2;
     --bg: #f7f8fa;
     --card: #ffffff;
@@ -88,6 +89,7 @@
   .math { background: var(--math); }
   .art { background: var(--art); }
   .music { background: var(--music); }
+  .kumon { background: var(--kumon); }
   .transit { background: var(--transit); color: var(--sub); font-size: 12.5px; }
   .free { background: #ffffff; }
 
@@ -183,7 +185,7 @@
             <td class="school">학교 수업<br>(5교시)</td>
             <td class="school">학교 수업<br>(5교시)</td>
             <td class="school">학교 수업<br>(5교시)</td>
-            <td class="school">학교 수업<br>(6교시 진행중)</td>
+            <td class="school">학교 수업</td>
             <td class="school">학교 수업<br>(5교시)</td>
           </tr>
           <tr>
@@ -236,10 +238,17 @@
           </tr>
           <tr>
             <td class="time-col">6:00~6:15</td>
-            <td class="free"></td>
+            <td class="kumon" rowspan="2">구몬</td>
             <td class="english">영어학원</td>
             <td class="free"></td>
             <td class="english">영어학원</td>
+            <td class="free"></td>
+          </tr>
+          <tr>
+            <td class="time-col">6:15~7:00</td>
+            <td class="free"></td>
+            <td class="free"></td>
+            <td class="free"></td>
             <td class="free"></td>
           </tr>
         </tbody>
@@ -251,12 +260,14 @@
         <span><span class="swatch" style="background:var(--math)"></span>수학학원</span>
         <span><span class="swatch" style="background:var(--art)"></span>미술학원</span>
         <span><span class="swatch" style="background:var(--music)"></span>음악학원</span>
+        <span><span class="swatch" style="background:var(--kumon)"></span>구몬</span>
         <span><span class="swatch" style="background:var(--transit)"></span>이동/자유시간</span>
       </div>
     </div>
 
     <p class="note">
-      * 화·목요일 영어학원(3:50~6:15) 시간대에 탁구 학원(4:00~5:00)이 겹쳐, 탁구는 시간표에서 제외했습니다.
+      * 화·목요일 영어학원(3:50~6:15) 시간대에 탁구 학원(4:00~5:00)이 겹쳐, 탁구는 시간표에서 제외했습니다.<br>
+      * 월요일 구몬학습은 6:00~7:00에 진행됩니다.
     </p>
     </div>
 
@@ -276,10 +287,10 @@
         <tbody>
           <tr>
             <td class="time-col">~12:30</td>
-            <td class="school">학교 수업<br>(5교시 진행중)</td>
-            <td class="school">학교 수업<br>(5교시 진행중)</td>
-            <td class="school">학교 수업<br>(5교시 진행중)</td>
-            <td class="school">학교 수업<br>(5교시 진행중)</td>
+            <td class="school">학교 수업</td>
+            <td class="school">학교 수업</td>
+            <td class="school">학교 수업</td>
+            <td class="school">학교 수업</td>
             <td class="school">학교 수업<br>(4교시)</td>
           </tr>
           <tr>
@@ -322,6 +333,22 @@
             <td class="english">영어학원</td>
             <td class="free"></td>
           </tr>
+          <tr>
+            <td class="time-col">4:00~6:00</td>
+            <td class="free"></td>
+            <td class="free"></td>
+            <td class="free"></td>
+            <td class="free"></td>
+            <td class="free"></td>
+          </tr>
+          <tr>
+            <td class="time-col">6:00~7:00</td>
+            <td class="kumon">구몬</td>
+            <td class="free"></td>
+            <td class="free"></td>
+            <td class="free"></td>
+            <td class="free"></td>
+          </tr>
         </tbody>
       </table>
 
@@ -329,12 +356,14 @@
         <span><span class="swatch" style="background:var(--school)"></span>학교 수업</span>
         <span><span class="swatch" style="background:var(--english)"></span>영어학원</span>
         <span><span class="swatch" style="background:var(--art)"></span>미술학원</span>
+        <span><span class="swatch" style="background:var(--kumon)"></span>구몬</span>
         <span><span class="swatch" style="background:var(--transit)"></span>자유시간</span>
       </div>
     </div>
 
     <p class="note">
-      * 금요일은 4교시(12:30) 하교 기준이며, 그 외 요일은 5교시(1:40) 하교 기준입니다.
+      * 금요일은 4교시(12:30) 하교 기준이며, 그 외 요일은 5교시(1:40) 하교 기준입니다.<br>
+      * 월요일 구몬학습은 6:00~7:00에 진행됩니다.
     </p>
     </div>
   </div>
