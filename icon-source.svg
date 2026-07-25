@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+  <rect x="0" y="0" width="512" height="512" fill="#2f5496"/>
+  <clipPath id="card">
+    <rect x="82" y="82" width="348" height="348" rx="51" ry="51"/>
+  </clipPath>
+  <g clip-path="url(#card)">
+    <rect x="82" y="82" width="348" height="348" fill="#ffffff"/>
+    <rect x="82" y="82" width="348" height="90.5" fill="#2f5496"/>
+    <rect x="82" y="172.5" width="116" height="128.75" fill="#fde9d9"/>
+    <rect x="198" y="172.5" width="116" height="128.75" fill="#dce6f1"/>
+    <rect x="314" y="172.5" width="116" height="128.75" fill="#e2efda"/>
+    <rect x="82" y="301.25" width="116" height="128.75" fill="#ffffff"/>
+    <rect x="198" y="301.25" width="116" height="128.75" fill="#fde9d9"/>
+    <rect x="314" y="301.25" width="116" height="128.75" fill="#dce6f1"/>
+    <line x1="198" y1="172.5" x2="198" y2="430" stroke="#e3e6ea" stroke-width="4"/>
+    <line x1="314" y1="172.5" x2="314" y2="430" stroke="#e3e6ea" stroke-width="4"/>
+    <line x1="82" y1="301.25" x2="430" y2="301.25" stroke="#e3e6ea" stroke-width="4"/>
+    <line x1="82" y1="172.5" x2="430" y2="172.5" stroke="#e3e6ea" stroke-width="4"/>
+  </g>
+</svg>
