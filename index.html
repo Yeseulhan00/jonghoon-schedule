@@ -65,6 +65,7 @@
     padding: 12px 8px;
     text-align: center;
     font-size: 14px;
+    word-break: keep-all;
   }
   thead th:first-child {
     border-top-left-radius: 0;
@@ -74,6 +75,7 @@
     text-align: center;
     border-bottom: 1px solid var(--line);
     border-right: 1px solid var(--line);
+    word-break: keep-all;
   }
   tbody td:last-child { border-right: none; }
   tbody tr:last-child td { border-bottom: none; }
@@ -149,10 +151,25 @@
   .tab-panel.active { display: block; }
 
   @media (max-width: 640px) {
+    body { padding: 20px 8px 40px; }
     table { font-size: 12px; }
     thead th, tbody td { padding: 8px 4px; }
-    .time-col { font-size: 11px; }
+    .time-col { font-size: 10.5px; }
     h1 { font-size: 19px; }
+    .tab-btn { padding: 9px 20px; font-size: 13px; }
+  }
+
+  @media (max-width: 400px) {
+    body { padding: 16px 4px 32px; }
+    table { font-size: 10.5px; }
+    thead th, tbody td { padding: 6px 2px; }
+    .time-col { font-size: 9.5px; }
+    h1 { font-size: 17px; }
+    .subtitle { font-size: 12px; }
+    .legend { gap: 8px; font-size: 11px; padding: 12px 8px 4px; }
+    .swatch { width: 10px; height: 10px; }
+    .note { font-size: 11px; }
+    .tab-btn { padding: 8px 16px; font-size: 12.5px; }
   }
 </style>
 </head>
