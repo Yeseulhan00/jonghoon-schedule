@@ -94,6 +94,14 @@
     font-size: 13px;
     color: var(--sub);
   }
+  .compact td {
+    padding-top: 3px;
+    padding-bottom: 3px;
+    font-size: 11px;
+  }
+  .compact td.time-col {
+    font-size: 10px;
+  }
   .school { background: var(--school); }
   .english { background: var(--english); }
   .math { background: var(--math); }
@@ -242,7 +250,7 @@
             <td class="english" rowspan="4">영어학원</td>
             <td class="free"></td>
           </tr>
-          <tr>
+          <tr class="compact">
             <td class="time-col">3:50~4:00</td>
             <td class="free"></td>
             <td class="free"></td>
@@ -325,36 +333,43 @@
             <td class="free"></td>
           </tr>
           <tr>
-            <td class="time-col">1:40~2:10</td>
-            <td class="music" rowspan="2">음악학원</td>
+            <td class="time-col">1:40~2:00</td>
             <td class="free"></td>
-            <td class="music" rowspan="2">음악학원</td>
+            <td class="free"></td>
+            <td class="free"></td>
             <td class="free"></td>
             <td class="free"></td>
           </tr>
           <tr>
-            <td class="time-col">2:10~2:30</td>
-            <td class="english" rowspan="4">영어학원</td>
-            <td class="english" rowspan="4">영어학원</td>
+            <td class="time-col">2:00~2:10</td>
+            <td class="taekwondo" rowspan="2">태권도</td>
+            <td class="free"></td>
+            <td class="taekwondo" rowspan="2">태권도</td>
+            <td class="free"></td>
+            <td class="free"></td>
+          </tr>
+          <tr>
+            <td class="time-col">2:10~3:00</td>
             <td class="english" rowspan="2">영어학원</td>
+            <td class="english" rowspan="2">영어학원</td>
+            <td class="english">영어학원</td>
           </tr>
           <tr>
-            <td class="time-col">2:30~3:00</td>
-            <td class="art" rowspan="2">미술학원</td>
-            <td class="art" rowspan="2">미술학원</td>
-          </tr>
-          <tr>
-            <td class="time-col">3:00~3:30</td>
+            <td class="time-col">3:00~4:00</td>
+            <td class="music">음악학원</td>
+            <td class="music">음악학원</td>
             <td class="free"></td>
           </tr>
           <tr>
-            <td class="time-col">3:30~4:00</td>
+            <td class="time-col">4:00~5:00</td>
+            <td class="art">미술학원</td>
             <td class="free"></td>
+            <td class="art">미술학원</td>
             <td class="free"></td>
             <td class="free"></td>
           </tr>
           <tr>
-            <td class="time-col">4:00~6:00</td>
+            <td class="time-col">5:00~6:00</td>
             <td class="free"></td>
             <td class="free"></td>
             <td class="free"></td>
@@ -377,6 +392,7 @@
         <span><span class="swatch" style="background:var(--english)"></span>영어학원</span>
         <span><span class="swatch" style="background:var(--art)"></span>미술학원</span>
         <span><span class="swatch" style="background:var(--music)"></span>음악학원</span>
+        <span><span class="swatch" style="background:var(--taekwondo)"></span>태권도</span>
         <span><span class="swatch" style="background:var(--kumon)"></span>구몬</span>
       </div>
     </div>
