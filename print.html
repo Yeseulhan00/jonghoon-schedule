@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>2학기 학원 시간표 (인쇄용)</title>
+<style>
+  :root {
+    --ink: #1f2430;
+    --sub: #6b7280;
+    --line: #e3e6ea;
+    --header: #2f5496;
+    --header-text: #ffffff;
+    --school: #dfe3e8;
+    --english: #fde9d9;
+    --math: #dce6f1;
+    --art: #e2efda;
+    --music: #fff2cc;
+    --kumon: #e6d9f2;
+    --taekwondo: #f8d7da;
+    --bg: #f7f8fa;
+    --card: #ffffff;
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    font-family: -apple-system, BlinkMacSystemFont, "Apple SD Gothic Neo", "Malgun Gothic", "Segoe UI", sans-serif;
+    background: var(--bg);
+    color: var(--ink);
+    padding: 24px 16px 40px;
+  }
+  .page {
+    max-width: 880px;
+    margin: 0 auto 40px;
+  }
+  .page + .page {
+    page-break-before: always;
+  }
+  h1 {
+    font-size: 22px;
+    font-weight: 700;
+    text-align: center;
+    margin: 0 0 4px;
+    color: var(--ink);
+  }
+  h2.name {
+    font-size: 17px;
+    font-weight: 700;
+    text-align: center;
+    margin: 0 0 4px;
+    color: var(--header);
+  }
+  .subtitle {
+    text-align: center;
+    color: var(--sub);
+    font-size: 13px;
+    margin: 0 0 20px;
+  }
+  .card {
+    background: var(--card);
+    border-radius: 14px;
+    box-shadow: 0 1px 3px rgba(20, 20, 30, 0.06), 0 8px 24px rgba(20, 20, 30, 0.04);
+    overflow: hidden;
+    border: 1px solid var(--line);
+  }
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 14px;
+  }
+  thead th {
+    background: var(--header);
+    color: var(--header-text);
+    font-weight: 700;
+    padding: 12px 8px;
+    text-align: center;
+    font-size: 14px;
+    word-break: keep-all;
+  }
+  thead th:first-child {
+    border-top-left-radius: 0;
+  }
+  tbody td {
+    padding: 12px 8px;
+    text-align: center;
+    border-bottom: 1px solid var(--line);
+    border-right: 1px solid var(--line);
+    word-break: keep-all;
+  }
+  tbody td:last-child { border-right: none; }
+  tbody tr:last-child td { border-bottom: none; }
+  .time-col {
+    font-weight: 700;
+    background: #f4f5f7;
+    white-space: nowrap;
+    font-size: 13px;
+    color: var(--sub);
+  }
+  .school { background: var(--school); }
+  .english { background: var(--english); }
+  .math { background: var(--math); }
+  .art { background: var(--art); }
+  .music { background: var(--music); }
+  .kumon { background: var(--kumon); }
+  .taekwondo { background: var(--taekwondo); }
+  .free { background: #ffffff; }
+
+  .legend {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 14px;
+    justify-content: center;
+    padding: 16px 12px 4px;
+    font-size: 12.5px;
+    color: var(--sub);
+  }
+  .legend span {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+  }
+  .swatch {
+    width: 12px;
+    height: 12px;
+    border-radius: 3px;
+    display: inline-block;
+    border: 1px solid rgba(0,0,0,0.06);
+  }
+  .note {
+    text-align: center;
+    color: var(--sub);
+    font-size: 12px;
+    margin: 18px auto 0;
+    max-width: 640px;
+    line-height: 1.6;
+  }
+
+  @media print {
+    body { background: #ffffff; padding: 0; }
+    .card { box-shadow: none; border: 1px solid var(--line); }
+    .page { margin: 0 auto; }
+  }
+</style>
+</head>
+<body>
+
+  <div class="page">
+    <h1>2학기 학원 시간표</h1>
+    <h2 class="name">종훈</h2>
+    <p class="subtitle">월요일 ~ 금요일</p>
+
+    <div class="card">
+      <table>
+        <thead>
+          <tr>
+            <th>시간</th>
+            <th>월</th>
+            <th>화</th>
+            <th>수</th>
+            <th>목</th>
+            <th>금</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td class="time-col">~1:40</td>
+            <td class="school">학교 수업<br>(5교시)</td>
+            <td class="school">학교 수업<br>(5교시)</td>
+            <td class="school">학교 수업<br>(5교시)</td>
+            <td class="school">학교 수업</td>
+            <td class="school">학교 수업<br>(5교시)</td>
+          </tr>
+          <tr>
+            <td class="time-col">1:40~2:00</td>
+            <td class="free"></td>
+            <td class="free"></td>
+            <td class="free"></td>
+            <td class="school" rowspan="2">학교<br>(6교시)</td>
+            <td class="free"></td>
+          </tr>
+          <tr>
+            <td class="time-col">2:00~2:30</td>
+            <td class="taekwondo" rowspan="2">태권도</td>
+            <td class="art" rowspan="2">미술학원</td>
+            <td class="free"></td>
+            <td class="taekwondo" rowspan="2">태권도</td>
+          </tr>
+          <tr>
+            <td class="time-col">2:30~3:00</td>
+            <td class="free"></td>
+            <td class="free"></td>
+          </tr>
+          <tr>
+            <td class="time-col">3:00~4:00</td>
+            <td class="music">음악학원</td>
+            <td class="english" rowspan="3">영어학원</td>
+            <td class="music">음악학원</td>
+            <td class="english" rowspan="3">영어학원</td>
+            <td class="free"></td>
+          </tr>
+          <tr>
+            <td class="time-col">4:00~5:00</td>
+            <td class="art">미술학원</td>
+            <td class="math">수학학원</td>
+            <td class="math" rowspan="3">수학학원</td>
+          </tr>
+          <tr>
+            <td class="time-col">5:00~5:30</td>
+            <td class="free"></td>
+            <td class="free"></td>
+          </tr>
+          <tr>
+            <td class="time-col">5:30~6:00</td>
+            <td class="free"></td>
+            <td class="free"></td>
+            <td class="free"></td>
+            <td class="free"></td>
+          </tr>
+          <tr>
+            <td class="time-col">6:00~7:00</td>
+            <td class="kumon">구몬</td>
+            <td class="free"></td>
+            <td class="free"></td>
+            <td class="free"></td>
+            <td class="free"></td>
+          </tr>
+        </tbody>
+      </table>
+
+      <div class="legend">
+        <span><span class="swatch" style="background:var(--school)"></span>학교 수업</span>
+        <span><span class="swatch" style="background:var(--english)"></span>영어학원</span>
+        <span><span class="swatch" style="background:var(--math)"></span>수학학원</span>
+        <span><span class="swatch" style="background:var(--art)"></span>미술학원</span>
+        <span><span class="swatch" style="background:var(--music)"></span>음악학원</span>
+        <span><span class="swatch" style="background:var(--taekwondo)"></span>태권도</span>
+        <span><span class="swatch" style="background:var(--kumon)"></span>구몬</span>
+      </div>
+    </div>
+
+    <p class="note">
+      * 화·목요일 영어학원(3:00~5:30) 시간대에 탁구 학원(4:00~5:00)이 겹쳐, 탁구는 시간표에서 제외했습니다.<br>
+      * 월요일 구몬학습은 6:00~7:00에 진행됩니다.
+    </p>
+  </div>
+
+  <div class="page">
+    <h1>2학기 학원 시간표</h1>
+    <h2 class="name">세훈</h2>
+    <p class="subtitle">월요일 ~ 금요일</p>
+
+    <div class="card">
+      <table>
+        <thead>
+          <tr>
+            <th>시간</th>
+            <th>월</th>
+            <th>화</th>
+            <th>수</th>
+            <th>목</th>
+            <th>금</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td class="time-col">~12:30</td>
+            <td class="school">학교 수업</td>
+            <td class="school">학교 수업</td>
+            <td class="school">학교 수업</td>
+            <td class="school">학교 수업</td>
+            <td class="school">학교 수업<br>(4교시)</td>
+          </tr>
+          <tr>
+            <td class="time-col">12:30~1:40</td>
+            <td class="school">학교 수업<br>(5교시)</td>
+            <td class="school">학교 수업<br>(5교시)</td>
+            <td class="school">학교 수업<br>(5교시)</td>
+            <td class="school">학교 수업<br>(5교시)</td>
+            <td class="free"></td>
+          </tr>
+          <tr>
+            <td class="time-col">1:40~2:00</td>
+            <td class="free"></td>
+            <td class="free"></td>
+            <td class="free"></td>
+            <td class="free"></td>
+            <td class="free"></td>
+          </tr>
+          <tr>
+            <td class="time-col">2:00~2:10</td>
+            <td class="taekwondo" rowspan="2">태권도</td>
+            <td class="free"></td>
+            <td class="taekwondo" rowspan="2">태권도</td>
+            <td class="free"></td>
+            <td class="free"></td>
+          </tr>
+          <tr>
+            <td class="time-col">2:10~3:00</td>
+            <td class="english" rowspan="2">영어학원</td>
+            <td class="english" rowspan="2">영어학원</td>
+            <td class="english">영어학원</td>
+          </tr>
+          <tr>
+            <td class="time-col">3:00~4:00</td>
+            <td class="music">음악학원</td>
+            <td class="music">음악학원</td>
+            <td class="free"></td>
+          </tr>
+          <tr>
+            <td class="time-col">4:00~5:00</td>
+            <td class="art">미술학원</td>
+            <td class="free"></td>
+            <td class="art">미술학원</td>
+            <td class="free"></td>
+            <td class="free"></td>
+          </tr>
+          <tr>
+            <td class="time-col">5:00~6:00</td>
+            <td class="free"></td>
+            <td class="free"></td>
+            <td class="free"></td>
+            <td class="free"></td>
+            <td class="free"></td>
+          </tr>
+          <tr>
+            <td class="time-col">6:00~7:00</td>
+            <td class="kumon">구몬</td>
+            <td class="free"></td>
+            <td class="free"></td>
+            <td class="free"></td>
+            <td class="free"></td>
+          </tr>
+        </tbody>
+      </table>
+
+      <div class="legend">
+        <span><span class="swatch" style="background:var(--school)"></span>학교 수업</span>
+        <span><span class="swatch" style="background:var(--english)"></span>영어학원</span>
+        <span><span class="swatch" style="background:var(--art)"></span>미술학원</span>
+        <span><span class="swatch" style="background:var(--music)"></span>음악학원</span>
+        <span><span class="swatch" style="background:var(--taekwondo)"></span>태권도</span>
+        <span><span class="swatch" style="background:var(--kumon)"></span>구몬</span>
+      </div>
+    </div>
+
+    <p class="note">
+      * 금요일은 4교시(12:30) 하교 기준이며, 그 외 요일은 5교시(1:40) 하교 기준입니다.<br>
+      * 월요일 구몬학습은 6:00~7:00에 진행됩니다.
+    </p>
+  </div>
+
+</body>
+</html>
